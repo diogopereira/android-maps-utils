@@ -149,7 +149,6 @@ public class IconGenerator {
         mRotation = ((degrees + 360) % 360) / 90;
     }
 
-
     /**
      * @return u coordinate of the anchor, with rotation applied.
      */
@@ -158,10 +157,24 @@ public class IconGenerator {
     }
 
     /**
+     * Set u anchor position.
+     */
+    public float setAnchorU(float anchor) {
+        mAnchorU = anchorU;
+    }
+
+    /**
      * @return v coordinate of the anchor, with rotation applied.
      */
     public float getAnchorV() {
         return rotateAnchor(mAnchorV, mAnchorU);
+    }
+
+    /**
+     * Set v anchor position.
+     */
+    public float setAnchorV(float anchor) {
+        mAnchorV = anchorV;
     }
 
     /**
